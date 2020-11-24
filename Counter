@@ -3,7 +3,7 @@ pragma solidity ^0.5.8;
 //Imagine a big integer counter that the whole world could share 
 
 contract Counter1 {
-    uint value;
+    int value;
     address organizer;
     
     modifier onlyOrganizer() {
@@ -14,19 +14,19 @@ contract Counter1 {
         organizer = msg.sender;
     }
     
-    function initialize(uint x) public onlyOrganizer() {
+    function initialize(int x) public onlyOrganizer() {
         value = x;
     }
     
-    function get() public view returns(uint) {
+    function get() public view returns(int) {
         return value;
     }
     
-    function increment(uint n) public {
+    function increment(int n) public {
         value = value + n;
     }
     
-    function decrement(uint n) public {
+    function decrement(int n) public {
         value = value - n;
     }
 }

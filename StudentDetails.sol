@@ -11,7 +11,7 @@ contract StudentDetails {
     struct student {
         string name;            //bytes32 can store up to 32 letters (ASCII)
         string projectName;     
-        string projectDescription; 
+        string projectDescription; //can be stored off chain
         string projectURL;      //bytes32 can store be used if services like URL shortner is used
         bool subMissionStatus;
         phases projectPhase;
@@ -22,6 +22,7 @@ contract StudentDetails {
     
     function setStudent (
         uint8 _id,
+        
         //string memmory _name mean the name is dynamic state variable of variable length so choose memmory
         string memory _name,
         string memory _projectName,

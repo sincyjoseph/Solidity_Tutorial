@@ -4,7 +4,7 @@ pragma solidity ^0.7.0;
 
 contract StudentDetails {
     enum phases {one, two, three}
-    
+    // enum datatype is a user defined datatype
     struct student {
         string name;            //bytes32 can store up to 32 letters (ASCII)
         string projectName;     
